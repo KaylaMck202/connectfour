@@ -3,7 +3,9 @@ class Player:
         self.name = self.get_name()
         self.piece = piece
     def get_name(self):
-        pass
+        name1 = input("Insert your name: ")
+        name2 = input("Insert your name: ")
+        #pass
     
     def get_choice(self,board):
         pass
