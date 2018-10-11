@@ -7,3 +7,9 @@ class Player:
     
     def get_choice(self,board):
         pass
+    
+    
+    
+if __name__=="__main__":
+    #test code
+    pass
