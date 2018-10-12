@@ -5,18 +5,28 @@ class Board:
     def __init__(self,width,height):
         self.width = width
         self.height = height
+        self.board = [[' ']*width for i in range(height)]
         
-    def place_piece(self,piece,col):
-        pass
+    def add_piece(self,piece,col):
+        
+                
     def empty_board(self):
-        pass
+        self.board = [[' ']*width for i in range(height)]
+        print(self.board)
     def check_win(self):
-        pass
+        if len(height):
+            pass
     def is_full(self):
-        pass
+        if numpieces == (self.width * self.height):
+            True
+        else:
+            False
     def disp_board(self):
-        board = [[' ']*width for i in range(height)]
-        print(board)
+        print(self.board)
+        
+#def main():
+#    bd = Board()
+#    bd.run()
     
 if __name__ == "__main__":
     #test code
