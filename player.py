@@ -10,14 +10,15 @@ class Player:
         #pass
     
     def get_choice(self,board):
+        #board= Board()
         choice = int(input("What column do you want to place your chip?:"))
-        col = choice
+        #choice = piece 
             
         #pass
     
-    
-    
+def main():   
+    pass
 if __name__=="__main__":
     #test code
-    #Player()
+    #Player(2)
     pass
