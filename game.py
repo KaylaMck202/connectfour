@@ -7,9 +7,12 @@ class Game:
         #[Player]players 
         #pass
     def play_game(self):
-        
-        #pass
+        pass
+#def main:
+#    pass
+    
 if __name__=="__main__":
+    Player()
     #test code
-    #Game()
-    pass
+    Game()
+    #pass
