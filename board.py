@@ -20,20 +20,40 @@ class Board:
         self.board = [[' ']*self.width for i in range(self.height)]
         
     def check_win(self):
-        c = 0
-        for i in range(self.width -4):
-            pass
-            
-            
-    def is_full(self):
+        num_inrow = 0
+        for row in range(self.height):
+            for col in range(self.width -4):
+                if self.board[row][col] == 'x':
+                    num_inrow += 1
+                if not self.board[row][col] == 'x':
+                    num_inrow = 0
+                if num_inrow >= 4:
+                    print('true')  #get rid of in final
+                    return True
+                
+        num_inrow = 0
+        for row in range(self.height):
+            for c in range(self.width -4):
+                if self.board[row][col] == 'o':
+                    num_inrow += 1
+                if not self.board[row][col] == 'o':
+                    num_inrow = 0
+                if c >= 4:
+                    print('true')  #get rid of in final
+                    return True
+
+                
+                     
+    def is_full(self):             
         for row in self.board:
-            for element in row:
+            for element in row:                
                 if element == ' ':
-                    #return False
-                    print('false')
+                    #print('false')
+                    return False
+                    
         else:
-                    #return True
-            print('true')
+            #print('true')
+            return True
                 
     def disp_board(self):
         for row in self.board:
@@ -53,14 +73,13 @@ def main():
     bd.run()
     
 if __name__ == "__main__":
-    bd = Board(2,2)
-    bd.add_piece('0',2)
-    bd.add_piece('0',2)
-    bd.add_piece(' ',1)
+    bd = Board(6,7)
+    bd.add_piece('x',4)
+    bd.add_piece('x',5)
     bd.add_piece('x',1)
+    bd.add_piece('x',2)
+    bd.add_piece('x',3)
+    bd.add_piece('i',3)
     bd.disp_board()
-    bd.is_full()
-    
+    bd.check_win()
 
-   
-        
