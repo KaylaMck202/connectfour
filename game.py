@@ -26,9 +26,11 @@ class Game:
                     print(f"{self.players[self.turn].name} wins!")
                     #return
                     break
-                
+#                if self.board.check_win()==False:
+#                    self.board.disp_board()
                 if self.board.is_full() == True:
                     self.board.disp_board()
+                    print()
                     print("it's a draw")
                     return
                 self.turn =(self.turn+1)%2
