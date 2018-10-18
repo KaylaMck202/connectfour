@@ -8,7 +8,7 @@ class Player:
         return self.name
 
     def get_choice(self):
-        choice = int(input(f"{self.name} pick column"))
+        choice = int(input(f"{self.name} pick column:"))
         return int(choice) 
         #pass
     
