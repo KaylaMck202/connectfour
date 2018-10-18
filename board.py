@@ -27,10 +27,6 @@ class Board:
                 if (self.board[row][c] == self.board[row][c+1] == self.board[row][c+2] == self.board[row][c+3] != ' '):
                     #print('win')
                     return True  
-#                else:
-#                    print('not win')
-#                    return False
-
 
         #check vert win
         for row in range(self.height -3):
@@ -38,27 +34,27 @@ class Board:
                 if (self.board[row][c] == self.board[row+1][c] == self.board[row+2][c] == self.board[row+3][c] != ' '):
                     #print('win')
                     return True
+                
         #check / win
         for row in range(3,self.height):
             for c in range(self.width -3):
                 if (self.board[row][c] == self.board[row-1][c+1] == self.board[row-2][c+2] == self.board[row-3][c+3] != ' '):
                     return True
-                
+                 
         #check \ win
         for row in range(self.height -3):
             for c in range(self.width -3):
-                pass
-         
-            
-                
-                
+                if (self.board[row][c] == self.board[row+1][c+1] == self.board[row+2][c+2] == self.board[row+3][c+3] != ' '):
+                    return True
+
+        return False
+                   
     def is_full(self):             
         for row in self.board:
             for element in row:                
                 if element == ' ':
                     #print('false')
                     return False              
-        
         return True
                 
     def disp_board(self):
@@ -88,15 +84,4 @@ def main():
     bd.run()
     
 if __name__ == "__main__":
-
-    bd = Board(7,6)
-    bd.add_piece('0',1)
-    bd.add_piece('x',1)
-    bd.add_piece('x',1)
-    bd.add_piece('x',1)
-    bd.add_piece('x',1)
-    bd.add_piece('x',3)
-    bd.add_piece('x',6)
-    bd.add_piece('x',7)
-    bd.disp_board()
-    bd.check_win()
+    main()
