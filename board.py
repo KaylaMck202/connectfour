@@ -34,18 +34,24 @@ class Board:
 
         #check vert win
         for row in range(self.height -3):
-            for c in range(self.width-3):
+            for c in range(self.width):
                 if (self.board[row][c] == self.board[row+1][c] == self.board[row+2][c] == self.board[row+3][c] != ' '):
                     #print('win')
                     return True
         #check / win
         for row in range(self.height -3):
             for c in range(self.width -3):
-                if (self.board[row][c] == self.board[row+1][c] == self.board[row+2][c] == self.board[row+3][c] != ' '):
-                    pass
+                if (self.board[row][c] == self.board[row+1][c+1] == self.board[row+2][c+2] == self.board[row+3][c+3] != ' '):
+                    return True
                 
-               
-
+        #check \ win
+        for row in range(self.height -3):
+            for c in range(self.width -3):
+                pass
+         
+            
+                
+                
     def is_full(self):             
         for row in self.board:
             for element in row:                
@@ -94,5 +100,3 @@ if __name__ == "__main__":
     bd.add_piece('x',7)
     bd.disp_board()
     bd.check_win()
-
-
