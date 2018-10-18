@@ -39,9 +39,9 @@ class Board:
                     #print('win')
                     return True
         #check / win
-        for row in range(self.height -3):
+        for row in range(3,self.height):
             for c in range(self.width -3):
-                if (self.board[row][c] == self.board[row+1][c+1] == self.board[row+2][c+2] == self.board[row+3][c+3] != ' '):
+                if (self.board[row][c] == self.board[row-1][c+1] == self.board[row-2][c+2] == self.board[row-3][c+3] != ' '):
                     return True
                 
         #check \ win
