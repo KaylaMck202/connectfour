@@ -20,16 +20,18 @@ class Game:
                 self.choice = self.players[self.turn].get_choice()
                 self.board.add_piece(self.choice, self.players[self.turn].piece)
                 self.board.check_win()
-                if self.board.check_win() == True:
+                if self.board.check_win()==True:
                     self.board.disp_board()
-                    print(f"{players[turn]} wins")
-                    return
+                    print()
+                    print(f"{self.players[self.turn].name} wins!")
+                    #return
+                    break
                 
                 if self.board.is_full() == True:
                     self.board.disp_board()
                     print("it's a draw")
                     return
-                self.turn =(turn+1)%2
+                self.turn =(self.turn+1)%2
             except Exception as e:
                 print()
                 print(f'That was not valid! {str(e)}')
