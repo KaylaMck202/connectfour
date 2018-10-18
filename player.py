@@ -13,5 +13,5 @@ class Player:
         #pass
     
 if __name__=="__main__":
-    Player(2)
+    Player('o')
     #pass
