@@ -2,11 +2,14 @@
 #from board import Board
 
 class Board:
+    '''init method'''
     def __init__(self,width,height):
         self.width = width
         self.height = height
         self.board = [[' ']*width for i in range(height)]
-        
+    
+    '''properly adds users piece in appropriate row and column
+        raises value error if column is full'''
     def add_piece(self,col,piece):
         if col > self.width or col < 1 :
             raise ValueError('Invalid Column')
@@ -16,10 +19,12 @@ class Board:
                 break
         else:
             raise ValueError('Column Full')
-                
+        
+        '''empties board free of all pieces'''    
     def empty_board(self):
         self.board = [[' ']*self.width for i in range(self.height)]
         
+        '''checks for a possible win conditions'''
     def check_win(self):
         #check horiz win
         for row in range(self.height):
@@ -48,7 +53,9 @@ class Board:
                     return True
 
         return False
-                   
+            
+        '''checks if any open slots are available
+    returns True if full and False if not'''
     def is_full(self):             
         for row in self.board:
             for element in row:                
@@ -57,8 +64,8 @@ class Board:
                     return False              
         return True
                 
+        '''prints board and displays column number'''
     def disp_board(self):
-                
         for i in range(self.width*2):
             print('-',end='')           
         print()
