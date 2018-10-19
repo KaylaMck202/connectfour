@@ -3,6 +3,7 @@ from player import Player
 
 class Game:
     def __init__(self):
+        print("Hello and welcome to Connect Four!")
         self.players = []
         self.players.append(Player('x'))
         self.players.append(Player('o'))
@@ -13,6 +14,7 @@ class Game:
         
         #pass
     def play_game(self):
+        
     
         while True:
             try:
