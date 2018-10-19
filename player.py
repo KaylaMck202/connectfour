@@ -4,10 +4,13 @@ class Player:
         self.name = self.get_name()
         self.piece = piece
     def get_name(self):
+        '''asks for the player's name and stores it'''
         self.name = input("What is your name?")
         return self.name
 
     def get_choice(self):
+        '''asks the player what column they want to place
+            their piece and stores it.'''
         choice = int(input(f"{self.name} pick column:"))
         return int(choice) 
         #pass
