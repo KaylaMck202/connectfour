@@ -3,6 +3,9 @@ from player import Player
 
 class Game:
     def __init__(self):
+        '''greets the players, asks for the player's name,
+            creates the board, and starts the game.'''
+        
         print("Hello and welcome to Connect Four!")
         self.players = []
         self.players.append(Player('x'))
@@ -14,7 +17,11 @@ class Game:
         
         #pass
     def play_game(self):
-        
+        '''displays the board, asks the player what column
+            they would like their piece to be placed, checks
+            for win and prints who won.It also checks if the board
+            is full, if so it prints out "it's a draw". The turn
+            changes.'''
     
         while True:
             try:
