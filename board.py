@@ -78,7 +78,7 @@ class Board:
         print()
         for i in range(self.width):
             print(i + 1,end=' ')
-
+    # does not print a newline at the end
 #        for row in self.board:
 #            for element in row:
 #                print(element,end=' ')
@@ -87,8 +87,10 @@ class Board:
 #            print(i + 1,end=' ')
            
 def main():
-    bd = Board()
-    bd.run()
+    bd = Board(7,6)
+    bd.disp_board()
+    bd.add_piece(4,'x')
+    bd.disp_board()
     
 if __name__ == "__main__":
     main()

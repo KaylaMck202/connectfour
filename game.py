@@ -6,13 +6,13 @@ class Game:
         '''greets the players, asks for the player's name,
             creates the board, and starts the game.'''
         
-        print("Hello and welcome to Connect Four!")
+        print("Hello and welcome to Connect Four!") # play_game should do this
         self.players = []
-        self.players.append(Player('x'))
-        self.players.append(Player('o'))
+        self.players.append(Player('x')) # play_game should do this
+        self.players.append(Player('o')) # play_game should do this
         self.board = Board(7,6) 
         self.turn = 0
-        self.game = self.play_game()
+        self.game = self.play_game()  # this auto-plays the game...not necessarily a good thing.
         
         
         #pass
@@ -24,7 +24,7 @@ class Game:
             changes.'''
     
         while True:
-            try:
+            try: # 
                 self.board.disp_board()
                 self.choice = self.players[self.turn].get_choice()
                 self.board.add_piece(self.choice, self.players[self.turn].piece)
