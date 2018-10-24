@@ -6,7 +6,7 @@ class Player:
     def get_name(self):
         '''asks for the player's name and stores it'''
         self.name = input("What is your name?")
-        return self.name
+        return self.name # unnecessary
 
     def get_choice(self):
         '''asks the player what column they want to place
